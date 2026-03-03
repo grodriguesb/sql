@@ -4,9 +4,9 @@ criar tabela em um banco de dados:
 
 -Pseudocódigo:
     CRIAR TABELA nomeDaTabela (
-        coluna1 TIPO_DE_DADOS, -- COMENTARIO DA COLUNA1
-        coluna2 TIPO_DE_DADOS, -- COMENTARIO DA COLUNA1
-        coluna3 TIPO_DE_DADOS -- COMENTARIO DA COLUNA1
+        coluna1 TIPO_DE_DADOS OPÇÃO, -- COMENTARIO DA COLUNA1
+        coluna2 TIPO_DE_DADOS OPÇÃO, -- COMENTARIO DA COLUNA1
+        coluna3 TIPO_DE_DADOS OPÇÃO -- COMENTARIO DA COLUNA1
     );
 
 -Sql:
@@ -16,3 +16,20 @@ criar tabela em um banco de dados:
         email VARCHAR(100) NOT NULL UNIQUE, -- E-mail do usuário
         endereco VARCHAR (50) NOT NULL -- Endereço do usuário
     );
+
+**Tipos de Dados**
+Os tipos de dados mais comuns são:
+-INTEGER : Inteiro
+-DECIMAL/NUMERIC : Decimal/Numérico
+-CHARACTER/VARCHAR : Caractere/Varchar
+-DATE/TIME : Data/Hora
+-BOOLEAN : Booleano
+-TEXT : Texto longo
+
+**OPÇÕES**
+Restrição de valor:
+    -NOT NULL : Preenchimento obrigatório
+    -UNIQUE : Valor unico
+    -DEFAULT : Valor padrão
+-Chaves primárias e estrangeiras
+-Auto incremento
