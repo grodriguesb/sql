@@ -33,3 +33,12 @@ Restrição de valor:
     -DEFAULT : Valor padrão
 -Chaves primárias e estrangeiras
 -Auto incremento
+
+*INSERT*
+Inserir dados em uma tabela no banco de dados:
+
+-Pseudocódigo:
+    INSERIR EM nomeDaTabela (coluna1, coluna2, coluna3) VALORES (valor1, valor2, valor3);
+
+-Sql:
+    INSERT INTO usuarios (id, nome, email) VALUES (1, "Gabriel Barros", "gabriel@teste.com");
