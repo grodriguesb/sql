@@ -54,7 +54,7 @@ Para selecionar dados em uma tabela no banco de dados:
 Para selecionar um dado especifíco da tabela:
 -Pseudocódigo:
     SELECIONAR colunas DA TABELA nomeDaTabela;
-    ONDE coluna É IGUAL A 1;
+    ONDE coluna = valorDaInformacao;
 
 -Sql:
     SELECT * FROM usuarios; -- Seleciona todas      
@@ -72,3 +72,25 @@ IN pertence a uma lista de valores
 BETWEEN dentro de um intervalo
 AND e lógico
 OR ou lógico
+
+*UPDATE*
+Para realizar a atualização de dados em uma tabela:
+-Pseudocódigo:
+    ATUALIZAR TABELA nomeDaTabela
+    DEFINIR coluna = novoValor
+    ONDE coluna = 'valorDaInformação'
+
+-Sql:
+    UPDATE usuarios
+    SET id = 3
+    WHERE email = 'marcos@teste.com'
+
+*DELETE*
+Para deletar uma informação da tabela:
+-Pseudocódigo:
+    DELETAR DA TABELA nomeDaTabela
+    ONDE coluna = 'valorDaInformação'
+
+-Sql:
+    DELETE FROM destinos
+    WHERE nome = 'Praia do Pedra'
