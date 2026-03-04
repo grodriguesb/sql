@@ -1,7 +1,6 @@
 
 *CREATE TABLE*
 criar tabela em um banco de dados:
-
 -Pseudocódigo:
     CRIAR TABELA nomeDaTabela (
         coluna1 TIPO_DE_DADOS OPÇÃO, -- COMENTARIO DA COLUNA1
@@ -36,9 +35,40 @@ Restrição de valor:
 
 *INSERT*
 Inserir dados em uma tabela no banco de dados:
-
 -Pseudocódigo:
-    INSERIR EM nomeDaTabela (coluna1, coluna2, coluna3) VALORES (valor1, valor2, valor3);
+    INSERIR EM nomeDaTabela (coluna1, coluna2, coluna3) VALORES (valor1, 'valor2', 'valor3');
 
 -Sql:
-    INSERT INTO usuarios (id, nome, email) VALUES (1, "Gabriel Barros", "gabriel@teste.com");
+    INSERT INTO usuarios (id, nome, email) VALUES (1, 'Gabriel Barros', 'gabriel@teste.com');
+
+*SELECT - SIMPLES*
+Para selecionar dados em uma tabela no banco de dados:
+-Pseudocódigo:
+    SELECIONAR colunas DA TABELA nomeDaTabela;
+
+-Sql:
+    SELECT * FROM usuarios; -- Mostra todas as colunas da tabela usuarios
+    SELECT nome FROM usuarios; -- Mostra apenas a coluna "nome" da tabela usuarios
+
+*SELECT WHERE*
+Para selecionar um dado especifíco da tabela:
+-Pseudocódigo:
+    SELECIONAR colunas DA TABELA nomeDaTabela;
+    ONDE coluna É IGUAL A 1;
+
+-Sql:
+    SELECT * FROM usuarios; -- Seleciona todas      
+    WHERE id = 1;
+
+**OPERADORES**
+= igualdade
+<> ou != desigualdade
+> maior que
+< menor que
+>= maior ou igual que
+<= menor ou igual que
+LIKE comparação de padrões
+IN pertence a uma lista de valores
+BETWEEN dentro de um intervalo
+AND e lógico
+OR ou lógico
