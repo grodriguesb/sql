@@ -94,3 +94,41 @@ Para deletar uma informação da tabela:
 -Sql:
     DELETE FROM destinos
     WHERE nome = 'Praia do Pedra'
+
+*MIGRAÇÃO DE DADOS DE UMA TABELA*
+Para migrar os dados de uma tabela para outra, após a criação da nova tabela com seus tipos de dados:
+-Pseudocódigo:
+    INSERIR NA TABELA nomeDaTabela (coluna1, coluna2, coluna3)
+    SELECIONAR AS coluna1, coluna2, coluna3
+    DA TABELA nomeDaTabela;
+
+-Sql:
+    INSERT INTO usuarios_nova (id, nome, email, endereco, data_nascimento)
+    SELECT id, nome, email, endereco, data_nascimento
+    FROM usuarios;
+
+*DROP TABLE*
+Para excluir uma tabela:
+-Pseudocódigo:
+    EXCLUIR TABELA nomeDaTabela;
+
+-Sql:
+    DROP TABLE usuarios;
+
+*ALTER TABLE*
+Para realizar uma alteração na tabela:
+
+Exemplo 1:
+-Pseudocódigo:
+    ALTERAR A TABELA nomeDaTabela RENOMEAR PARA novoNome;
+
+-Sql:
+    ALTER TABLE usuarios_nova RENAME TO usuarios;
+
+
+Exemplo 2:
+-Pseudocódigo:
+    ALTERAR A TABELA nomeDaTabela MODIFICAR A COLUNA coluna1 TIPO_DE_DADO(QTD);
+
+-Sql:
+    ALTER TABLE usuarios_nova MODIFY COLUMN endereco VARCHAR(150);
